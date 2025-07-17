@@ -420,21 +420,39 @@
                                         <span class="meta-text-color text-uppercase">Data Analytics</span>
                                     </div>
                                 </div><!-- /col -->
-                                <div class="col-xl-5 col-lg-5 col-md-6 col-sm- col- pl-lg-0">
-                                   <h2>Logistics Data Transformation and Analysis</h2>
-                                </div><!-- /col -->
-                               <div class="col-xl-5 col-lg-5 col-md-6 d-flex justify-content-end align-items-center">
-                                        <!-- Removed conflicting classes like left-0 and ml-xl-3 -->
-                                        <img class="port-img" src="images/work/sql.jpg" alt="portfolio image 1">
-                                    </div>
-                                    <div class="port-content text-center transition5 z-index11" data-toggle="modal"
-                                        data-target="#exampleModal-p1">
-                                        <span class="d-inline-block"><i class="far fa-plus"></i>
-                                        </span>
-                                    </div><!-- /port-content -->
-                                </div><!-- /col -->
-                            </div><!-- /single-prot -->
-                        </div><!-- /col -->
+                                <!-- This is the main container for a single project entry in your portfolio section -->
+<div class="single-prot flex items-center justify-between p-4 bg-white rounded-lg shadow-md mb-4 relative overflow-hidden">
+
+    <!-- Category (DATA ANALYTICS) -->
+    <div class="category text-sm text-gray-500 uppercase tracking-wider absolute left-4 top-4">
+        DATA ANALYTICS
+    </div>
+
+    <!-- Main Title (Logistics Data Transformation and Analysis) -->
+    <div class="title-area flex-grow pl-24 pr-4"> <!-- Added padding to account for category -->
+        <h2 class="text-3xl font-bold text-gray-800 whitespace-nowrap overflow-hidden text-ellipsis">
+            Logistics Data Transformation and Analysis
+        </h2>
+    </div>
+
+    <!-- Image and Plus Icon Container -->
+    <div class="image-plus-container flex items-center justify-end relative">
+        <!-- Image -->
+        <img class="port-img" src="images/work/sql.jpg" alt="portfolio image 1">
+
+        <!-- Plus Icon -->
+        <div class="port-content text-center z-index11" data-toggle="modal" data-target="#exampleModal-p1">
+            <span class="plus-icon flex items-center justify-center rounded-full bg-green-500 text-white text-2xl w-12 h-12 cursor-pointer shadow-md">
+                <i class="fas fa-plus"></i> <!-- Using Font Awesome for the plus icon -->
+            </span>
+        </div>
+    </div>
+
+</div><!-- /single-prot -->
+
+<!-- You will need to include Font Awesome for the plus icon -->
+<!-- Add this to your <head> section if you don't have it already -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
                         
 
                     <!-- Modal1 start -->
