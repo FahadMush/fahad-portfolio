@@ -865,6 +865,63 @@ span#main {
 
 /* 8. experience area
 -------------------------------------------------------------- */
+
+/* Styles for the experience wrapper (NEW RULE) */
+.experience-wrapper {
+    position: relative; /* This is crucial for .experience-bg-img to position correctly */
+    overflow: hidden; /* Prevents content from spilling out if it's too large */
+    /* You might need to set a min-height here if the content is short,
+       e.g., min-height: 500px; to ensure the background image has space */
+}
+
+/* Styles for the background image div (UPDATED RULE) */
+.experience-bg-img {
+    position: absolute; /* Positions it relative to .experience-wrapper */
+    left: 0; /* Aligns to the left edge of the parent */
+    top: 0; /* Aligns to the top edge of the parent */
+    bottom: 0; /* Makes it span the full height of the parent */
+    width: 50%; /* Makes it occupy the left half of the parent's width */
+
+    /* Directly apply background image properties */
+    background-image: url('images/work/work.png'); /* Make sure this path is correct relative to style.css */
+    background-size: cover; /* Scales the image to cover the entire div, cropping if necessary */
+    background-position: center center; /* Centers the image within the div */
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+
+    z-index: 0; /* Ensures it stays behind the content */
+    border-bottom-right-radius: 10px; /* Keep existing border-radius */
+    border-top-right-radius: 10px; /* Keep existing border-radius */
+}
+
+/* Responsive adjustments for smaller screens (NEW RULES) */
+@media (max-width: 768px) {
+    .experience-bg-img {
+        position: relative; /* Change to relative to flow with content */
+        width: 100%; /* Take full width */
+        height: 250px; /* Give it a fixed height on mobile */
+        background-position: center top; /* Adjust image position within its new dimensions */
+        margin-bottom: 20px; /* Add some space below the image */
+    }
+
+    /* Adjust the content column to remove the offset and padding */
+    .experience-margin {
+        margin-top: 0 !important; /* Remove top margin that might push content down */
+        padding-left: 15px !important; /* Adjust left padding for mobile */
+        padding-right: 15px !important; /* Add right padding for mobile */
+    }
+
+    /* Ensure the column that was hidden (d-none) remains hidden or is adjusted if needed */
+    .col-xl-6.d-none {
+        display: none !important;
+    }
+
+    /* Remove offset from the content column on smaller screens */
+    .col-xl-6.offset-lg-6 {
+        margin-left: 0 !important; /* Remove the offset */
+    }
+}
+
+/* Existing CSS rules for experience area continue below this point */
 .experience-img {
   margin-left: -48%;
 }
@@ -898,17 +955,17 @@ span#main {
 .experience-service-text h4 span {
   font-size: 15px;
 }
-.experience-bg-img {
+/* The rule below was moved and updated above */
+/* .experience-bg-img {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-}
+} */
 .experience-service-text h3 {
   font-size: 30px;
 }
 .experience-service-text h4 {
   font-size: 18px;
 }
-
 /* 9. skill area
 -------------------------------------------------------------- */
 .single-skill .knob {
