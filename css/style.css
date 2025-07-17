@@ -866,12 +866,12 @@ span#main {
 /* 8. experience area
 -------------------------------------------------------------- */
 
-/* Styles for the experience wrapper (NEW RULE) */
+/* Styles for the experience wrapper (CRUCIAL: Added min-height) */
 .experience-wrapper {
     position: relative; /* This is crucial for .experience-bg-img to position correctly */
     overflow: hidden; /* Prevents content from spilling out if it's too large */
-    /* You might need to set a min-height here if the content is short,
-       e.g., min-height: 500px; to ensure the background image has space */
+    min-height: 600px; /* <--- ADDED/ADJUSTED THIS: Ensures the wrapper has enough height for the image */
+    /* Adjust min-height as needed based on the height of your content */
 }
 
 /* Styles for the background image div (UPDATED RULE) */
@@ -883,7 +883,7 @@ span#main {
     width: 50%; /* Makes it occupy the left half of the parent's width */
 
     /* Directly apply background image properties */
-    background-image: url('images/work/work.png'); /* Make sure this path is correct relative to style.css */
+    background-image: url('images/work/work.png'); /* <--- VERIFY THIS PATH IS CORRECT */
     background-size: cover; /* Scales the image to cover the entire div, cropping if necessary */
     background-position: center center; /* Centers the image within the div */
     background-repeat: no-repeat; /* Prevents the image from tiling */
@@ -955,7 +955,7 @@ span#main {
 .experience-service-text h4 span {
   font-size: 15px;
 }
-/* The rule below was moved and updated above */
+/* The rule below was moved and updated above, so this old one is redundant */
 /* .experience-bg-img {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
