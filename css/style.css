@@ -774,11 +774,12 @@ span#main {
 
 /* 8. experience area
 -------------------------------------------------------------- */
-.experience-img {
-  width: 100%; /* Ensure it takes the full width of the container */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Cover the area without cropping */
-}
+   .experience-img img {
+       width: 100%; /* Full width of the container */
+       height: 100%; /* Full height of the container */
+       object-fit: cover; /* Cover the area without stretching */
+   }
+
 
 .experience-ser-icon {
   background: var(--main-color);
@@ -813,10 +814,10 @@ span#main {
 }
 
 .experience-bg-img {
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
-  background-size: cover; /* Ensure the background image covers the area */
-  background-position: center; /* Center the background image */
+    height: 400px; /* Set a specific height */
+    width: 100%; /* Ensure it takes full width */
+    background-size: cover; /* Ensure the background covers the area */
+    background-position: center; /* Center the image */
 }
 
 .experience-service-text h3 {
