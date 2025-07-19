@@ -775,7 +775,7 @@ span#main {
 /* 8. experience area
 -------------------------------------------------------------- */
    .experience-img img {
-       width: 400px; /* Full width of the container */
+       width: 700px; /* Full width of the container */
        height: 100%; /* Full height of the container */
        object-fit: cover; /* Cover the area without stretching */
    }
