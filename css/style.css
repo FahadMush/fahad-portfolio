@@ -775,48 +775,58 @@ span#main {
 /* 8. experience area
 -------------------------------------------------------------- */
 .experience-img {
-  margin-left: -48%;
+  width: 100%; /* Ensure it takes the full width of the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without cropping */
 }
+
 .experience-ser-icon {
   background: var(--main-color);
   border: 1px solid var(--main-color);
   border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
 }
+
 .experience-content li:hover .experience-ser-icon,
 .education-content li:hover .experience-ser-icon {
   background: transparent;
 }
+
 .experience-content li .experience-ser-icon span,
 .education-content li .experience-ser-icon span {
   color: #fff;
 }
+
 .experience-content li:hover .experience-ser-icon span,
 .education-content li:hover .experience-ser-icon span {
   color: var(--main-color);
 }
+
 .experience-ser-icon span {
   width: 70px;
   height: 70px;
   line-height: 70px;
   font-size: 35px;
 }
+
 .experience-service-text h4 span {
   font-size: 15px;
 }
+
 .experience-bg-img {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
+  background-size: cover; /* Ensure the background image covers the area */
+  background-position: center; /* Center the background image */
 }
+
 .experience-service-text h3 {
   font-size: 30px;
 }
+
 .experience-service-text h4 {
   font-size: 18px;
 }
+
 
 
 
